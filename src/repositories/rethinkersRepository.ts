@@ -3,6 +3,7 @@ import config from "../../knexfile";
 
 const knexInstance = knex(config);
 
+
 const insertRethinker = async (rethinkerData: any) => {
   try {
     const newRethinkerId = await knexInstance("rethinkers").insert({
@@ -44,5 +45,5 @@ const getAllRethinkers = async () => {
 export default {
   insertRethinker,
   getRethinkerByEmail,
-  getAllRethinkers
+  getAllRethinkers,
 };
